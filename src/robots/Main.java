@@ -22,14 +22,14 @@ public class Main {
 
         if (choice == 4 || choice == 5 || choice == 6
                 || choice == 7 || choice == 8) {
-            currentTerminator = new Terminator_Upgrade("Punisher", "T-2000", "Machine Gun", "Liquid");
+            currentTerminator = new TerminatorUpgrade("Punisher", "T-2000", "Machine Gun", "Liquid");
 
             System.out.println("Random number = " + choice + " so created Terminator is: " + currentTerminator.getName() + " " + currentTerminator.getModel());
 
             currentTerminator.speak();
 
         } else {
-            currentTerminator = new Terminator_Latest("Executor", "T-TX", "Rocket Launcher", "Solid");
+            currentTerminator = new TerminatorLatest("Executor", "T-TX", "Rocket Launcher", "Solid");
 
             System.out.println("Random number = " + choice + " so created Terminator is: " + currentTerminator.getName() + " " + currentTerminator.getModel());
 
