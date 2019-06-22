@@ -1,9 +1,10 @@
 package robots;
 
-public class Terminator {
+public class Terminator implements Transformation {
     private String name;
     private String model;
     private String weapon;
+    private boolean armor;
 
     public Terminator() {
 
@@ -32,10 +33,15 @@ public class Terminator {
     }
 
     public void speak() {
-        System.out.println("Robot " + name + " says: \" I'm going to kill you \"");
+        System.out.println("Robot " + name + " says: \" I'm going to kill you \"\n");
     }
 
     public void shoot() {
         System.out.println("Bang bang!");
+    }
+
+    @Override
+    public void activateArmor(String planetName) {
+        System.out.println("Robot has been successfully transformed. " + "Armor for planet named: \"" + planetName + "\" is activated.");
     }
 }
