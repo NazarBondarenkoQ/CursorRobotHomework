@@ -12,7 +12,7 @@ public class Main {
 
         Terminator currentTerminator;
 
-        if (choice < 3) {
+        if (choice <= 3) {
             currentTerminator = new Terminator("Desolator", "T-70", "Shotgun");
 
             System.out.println("Random number = " + choice + " so created Terminator is: " + currentTerminator.getName() + " " + currentTerminator.getModel());
