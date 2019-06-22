@@ -20,7 +20,7 @@ public class Main {
             currentTerminator.speak();
         }
 
-        if (choice == 4 || choice == 5 || choice == 6
+        else if (choice == 4 || choice == 5 || choice == 6
                 || choice == 7 || choice == 8) {
             currentTerminator = new TerminatorUpgrade("Punisher", "T-2000", "Machine Gun", "Liquid");
 
