@@ -12,7 +12,7 @@ public class Main {
 
         Terminator currentTerminator;
 
-        if (choice == 1 || choice == 2 || choice == 3) {
+        if (choice < 3) {
             currentTerminator = new Terminator("Desolator", "T-70", "Shotgun");
 
             System.out.println("Random number = " + choice + " so created Terminator is: " + currentTerminator.getName() + " " + currentTerminator.getModel());
@@ -20,8 +20,7 @@ public class Main {
             currentTerminator.speak();
         }
 
-        else if (choice == 4 || choice == 5 || choice == 6
-                || choice == 7 || choice == 8) {
+        else if (choice > 3 && choice <= 8) {
             currentTerminator = new TerminatorUpgrade("Punisher", "T-2000", "Machine Gun", "Liquid");
 
             System.out.println("Random number = " + choice + " so created Terminator is: " + currentTerminator.getName() + " " + currentTerminator.getModel());
