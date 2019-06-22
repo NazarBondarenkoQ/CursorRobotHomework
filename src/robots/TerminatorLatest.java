@@ -1,9 +1,9 @@
 package robots;
 
-    public class Terminator_Latest extends Terminator_Upgrade{
+    public class TerminatorLatest extends Terminator_Upgrade{
         private boolean invisibility;
 
-        public Terminator_Latest(String name, String model, String weapon, String form) {
+        public TerminatorLatest(String name, String model, String weapon, String form) {
             super(name, model, weapon, form);
         }
 
