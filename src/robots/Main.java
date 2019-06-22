@@ -8,7 +8,7 @@ public class Main {
 
         Random random = new Random();
 
-        int choice = random.nextInt(12 - 1) + 1;
+        int choice = random.nextInt(12) + 1;
 
         Terminator currentTerminator;
 
