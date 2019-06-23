@@ -11,8 +11,6 @@ public class Main {
         int choice = random.nextInt(12) + 1;
 
         Terminator currentTerminator;
-        TerminatorLatest terminatorLatest = new TerminatorLatest("Executor", "T-TX", "Rocket Launcher", "Solid");
-
 
         if (choice <= 3) {
             currentTerminator = new Terminator("Desolator", "T-70", "Shotgun");
