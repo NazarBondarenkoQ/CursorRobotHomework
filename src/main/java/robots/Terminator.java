@@ -1,5 +1,7 @@
 package robots;
 
+import planets.Galaxy;
+
 public class Terminator implements Transformation {
     private String name;
     private String model;
@@ -41,7 +43,7 @@ public class Terminator implements Transformation {
     }
 
     @Override
-    public void activateArmor(String planetName) {
-        System.out.println("Robot has been successfully transformed. " + "Armor for planet named: \"" + planetName + "\" is activated.");
+    public void activateArmor(Galaxy galaxy) {
+        System.out.println("Robot has been successfully transformed. " + "Armor for planet named: " + galaxy + " is activated.");
     }
 }

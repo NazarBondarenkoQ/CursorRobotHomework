@@ -1,18 +1,13 @@
-import planets.HotPlanet;
-import planets.OceanPlanet;
-import planets.WindPlanet;
+import planets.Galaxy;
 import robots.Terminator;
 import robots.TerminatorLatest;
 import robots.TerminatorUpgrade;
-import planets.Galaxy;
 
 import java.util.Random;
 
 public class Main {
 
     public static void main(String[] args) {
-
-        Galaxy galaxy = new Galaxy();
         Random random = new Random();
         int choice = random.nextInt(12) + 1;
         int temp = random.nextInt(3) + 65;
@@ -35,15 +30,12 @@ public class Main {
 
         switch (destination) {
             case 'A':
-                OceanPlanet oceanPlanet = galaxy.getOceanPlanet();
                 robotTransformation(destination, currentTerminator);
                 break;
             case 'B':
-                WindPlanet windPlanet = galaxy.getWindPlanet();
                 robotTransformation(destination, currentTerminator);
                 break;
             case 'C':
-                HotPlanet hotPlanet = galaxy.getHotPlanet();
                 robotTransformation(destination, currentTerminator);
                 break;
         }
@@ -57,11 +49,11 @@ public class Main {
 
     public static void robotTransformation(char destination, Terminator currentTerminator) {
         if (destination == 'A') {
-            currentTerminator.activateArmor("Ocean Planet");
+            currentTerminator.activateArmor(Galaxy.OCEAN_PLANET);
         } else if (destination == 'B') {
-            currentTerminator.activateArmor("Wind Planet");
+            currentTerminator.activateArmor(Galaxy.WIND_PLANET);
         } else {
-            currentTerminator.activateArmor("Sun Planet");
+            currentTerminator.activateArmor(Galaxy.SUN_PLANET);
         }
     }
 }
