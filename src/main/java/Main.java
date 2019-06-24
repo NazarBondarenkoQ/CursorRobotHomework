@@ -9,8 +9,9 @@ public class Main {
 
     public static void main(String[] args) {
         Random random = new Random();
+        final int asciiCharCode = 65; // I use ASCII character encoding to create a random character, "65" stays for "A" char.
         int choice = random.nextInt(12) + 1;
-        int temp = random.nextInt(3) + 65;
+        int temp = random.nextInt(3) + asciiCharCode; // Here is the usage number "66" stays for "B" and "67" for "C".
         char destination = (char) temp;
         Terminator currentTerminator;
 
