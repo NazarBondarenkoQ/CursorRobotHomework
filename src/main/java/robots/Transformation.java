@@ -1,8 +1,6 @@
 package robots;
 
-import planets.Galaxy;
-
 public interface Transformation {
 
-    void activateArmor(char destination);
+    void activateArmor(String name);
 }

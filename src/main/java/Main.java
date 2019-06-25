@@ -12,13 +12,15 @@ public class Main {
         final int asciiCharCode = 65; // I use ASCII character encoding to create a random character, "65" stays for "A" char.
         int choice = random.nextInt(12) + 1;
         int temp = random.nextInt(3) + asciiCharCode; // Here is the usage of constant "65+1" stays for "B" and "66+1" for "C" relevantly.
-        char destination = (char) temp;
+        char destination = (char)temp;
+        String check = String.valueOf(destination);
         Terminator currentTerminator;
+        Galaxy galaxy = Galaxy.GALAXY;
 
         if (choice <= 3) {
             currentTerminator = new Terminator("Desolator", "T-70", "Shotgun");
             terminatorAction(choice, currentTerminator);
-        } else if (choice > 3 && choice <= 8) {
+        } else if (choice >= 4 && choice <= 8) {
             currentTerminator = new TerminatorUpgrade("Punisher", "T-2000", "Machine Gun", "Liquid");
             terminatorAction(choice, currentTerminator);
         } else {
@@ -29,32 +31,12 @@ public class Main {
         System.out.println("!!!Oh no, aliens have stole " + currentTerminator.getName() + " and taking him to another planet!!! " +
                 "Random char is: " + destination + "\n");
 
-        switch (destination) {
-            case 'A':
-                robotTransformation(destination, currentTerminator);
-                break;
-            case 'B':
-                robotTransformation(destination, currentTerminator);
-                break;
-            case 'C':
-                robotTransformation(destination, currentTerminator);
-                break;
-        }
+        currentTerminator.activateArmor(check);
     }
 
 
-    public static void terminatorAction(int choice, Terminator currentTerminator) {
+    private static void terminatorAction(int choice, Terminator currentTerminator) {
         System.out.println("Random number = " + choice + " so created Terminator is: " + currentTerminator.getName() + " " + currentTerminator.getModel() + "\n");
         currentTerminator.speak();
-    }
-
-    public static void robotTransformation(char destination, Terminator currentTerminator) {
-        if (destination == 'A') {
-            currentTerminator.activateArmor(Galaxy.OCEAN_PLANET);
-        } else if (destination == 'B') {
-            currentTerminator.activateArmor(Galaxy.WIND_PLANET);
-        } else {
-            currentTerminator.activateArmor(Galaxy.SUN_PLANET);
-        }
     }
 }

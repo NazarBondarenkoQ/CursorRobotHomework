@@ -2,7 +2,7 @@ package robots;
 
 import planets.Galaxy;
 
-public class Terminator {
+public class Terminator implements Transformation {
     private String name;
     private String model;
     private String weapon;
@@ -40,6 +40,11 @@ public class Terminator {
 
     public void shoot() {
         System.out.println("Bang bang!");
+    }
+
+    @Override
+    public void activateArmor(String name) {
+        System.out.println("Robot has been taken to: " + Galaxy.valueOf(name).getName() + ". Armor is activated");
     }
 
 }
