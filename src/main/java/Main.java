@@ -1,4 +1,3 @@
-import planets.Galaxy;
 import robots.Terminator;
 import robots.TerminatorLatest;
 import robots.TerminatorUpgrade;
@@ -15,12 +14,11 @@ public class Main {
         char destination = (char)temp;
         String check = String.valueOf(destination);
         Terminator currentTerminator;
-        Galaxy galaxy = Galaxy.GALAXY;
 
         if (choice <= 3) {
             currentTerminator = new Terminator("Desolator", "T-70", "Shotgun");
             terminatorAction(choice, currentTerminator);
-        } else if (choice >= 4 && choice <= 8) {
+        } else if (choice > 3 && choice <= 8) {
             currentTerminator = new TerminatorUpgrade("Punisher", "T-2000", "Machine Gun", "Liquid");
             terminatorAction(choice, currentTerminator);
         } else {
