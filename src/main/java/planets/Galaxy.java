@@ -1,7 +1,7 @@
 package planets;
 
 public enum Galaxy {
-    A("Sun Planet"), B("Ocean Planet"), C("Wind planet"), GALAXY("Galaxy");
+    A("Ocean Planet"), B("Wind Planet"), C("Sun Planet");
 
     private String name;
 

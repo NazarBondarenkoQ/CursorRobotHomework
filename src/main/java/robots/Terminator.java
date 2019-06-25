@@ -6,11 +6,6 @@ public class Terminator implements Transformation {
     private String name;
     private String model;
     private String weapon;
-    private boolean armor;
-
-    public Terminator() {
-
-    }
 
     public Terminator(String name, String model, String weapon) {
         this.name = name;
@@ -26,20 +21,8 @@ public class Terminator implements Transformation {
         return model;
     }
 
-    public String getWeapon() {
-        return weapon;
-    }
-
-    public void walk() {
-        System.out.println("Robot is walking");
-    }
-
     public void speak() {
-        System.out.println("Robot " + name + " says: \" I'm going to kill you \"\n");
-    }
-
-    public void shoot() {
-        System.out.println("Bang bang!");
+        System.out.println("Robot " + name + " says: \" I'm going to kill you with a "+ weapon +"\"\n");
     }
 
     @Override
